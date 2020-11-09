@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "connect-ssi": "^1.1.1",
     "express": "~3.3.4"
   }
 }
