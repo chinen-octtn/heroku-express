@@ -1,5 +1,6 @@
 
 const express = require('express')
+const connectSSI = require('connect-ssi')
 const app = express()
 const user = process.env.USER
 const pass = process.env.PASS
@@ -12,6 +13,11 @@ if (user && pass) {
         user, pass
     ))
 }
+
+app.use(connectSSI({
+    baseDir: docRoot,
+    ext: '.html'
+}));
 
 app.use(express.logger('dev'))
 app.use(express.compress())
